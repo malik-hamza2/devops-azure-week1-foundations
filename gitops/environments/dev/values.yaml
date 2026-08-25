@@ -1,0 +1,18 @@
+# Dev Environment Configuration
+replicaCount: 1
+
+image:
+  repository: ghcr.io/malik-hamza2/two-tier-flask
+  tag: "v1"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+
+environment: dev
